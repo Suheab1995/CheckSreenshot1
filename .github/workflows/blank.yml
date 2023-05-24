@@ -33,7 +33,7 @@ jobs:
       - name: Create Screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with: 
-          url:  https://github.com/Suheab1995/CheckSreenshot1
+          url:  https://github.com/Suheab1995/CheckSreenshot1/actions/runs/${{ github.run_id }}/
       - name: Upload it to the artifactory
         uses: actions/upload-artifact@v3
         with:
