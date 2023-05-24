@@ -5,10 +5,6 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,7 +29,7 @@ jobs:
       - name: Create Screenshot
         uses: karol-brejna-i/webpage-screenshot-action@v1
         with: 
-          url:  https://github.com/Suheab1995/CheckSreenshot1/actions/runs/${{ github.run_id }}/
+          url:  https://github.com/Suheab1995/CheckSreenshot1/actions/runs/${{ github.run_id }}/jobs/${{ github.job_id }}
       - name: Upload it to the artifactory
         uses: actions/upload-artifact@v3
         with:
